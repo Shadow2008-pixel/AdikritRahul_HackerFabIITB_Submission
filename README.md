@@ -1,3 +1,6 @@
 # AdikritRahul_HackerFabIITB_Submission
 Hotplate problem statement solution
 Loom video explanation of thought process: https://www.loom.com/share/edb8c11057574bc18da1e0ae747746e1
+
+For designing the Hotplate I first searched up its major functions and then got to work on building it.
+I chose an MIG6 aluminum tooling plate over alternatives due to flatness and sufficient conductivity for 400 degrees Celsius requirements, and rejected ovens because they fail to remove solvent vapors during soft bake. For uniform heating, I used mica insulation and multiple cartridge heaters based on simulation run on claude for number of heaters and positioning. I implemented a two-zone strategy with PT-100 sensors (specifically PT-1000) at the coldest and mid points to control temperature within plus or minus 0.5 degrees Celsius using PID logic and edge heater coordination along with added trim heaters(can add about 2 degrees) for managing non uniformities due to material defects. The system uses MAX31865 modules with an ESP32 to drive SSR-controlled heater switches. The calibration at room temperature and again at 400 degrees Celsius should be done. The document attached describes safety components sized to the chosen parts.
