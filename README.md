@@ -1,0 +1,2 @@
+# AdikritRahul_HackerFabIITB_Submission
+Hotplate problem statement solution
